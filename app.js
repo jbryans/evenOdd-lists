@@ -4,23 +4,31 @@ let oddList = document.getElementById("odd")
 let evenList = document.getElementById("even")
 
 
-function updateWord(element) {
+const updateWord = (element) => {
     usersWord = element.value
 
     console.log(usersWord)
-  }
+}
 
-  function handleSubmit() {
+const handleSubmit = () => {
     let newListItem = document.createElement('LI')
     newListItem.innerText = usersWord
-    
-    if(usersWord.length % 2 === 0) {
-        evenList.appendChild(newListItem)       
+
+
+
+    if (usersWord.length % 2 === 0) {
+        
+         evenList.appendChild(newListItem)
     } else {
-        oddList.appendChild(newListItem)
+         oddList.appendChild(newListItem)
     }
 
-   
-    let usersWord = ""
+
+
+    usersWord = ""
     document.getElementById("even-odd-form").reset()
-  }
+}
+
+
+
+ 
